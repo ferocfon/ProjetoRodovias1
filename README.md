@@ -19,31 +19,6 @@ KPIs Extraídos:
 6- Índice de Acidentes por Quilômetro
 7- Acidentes por Horário do Dia
 
-Total de Acidentes por Gravidade Ano a Ano (considerando ambas as tabelas)
-SELECT 
-    YEAR(STR_TO_DATE(data, '%d/%m/%Y')) AS ano,
-    'afd' AS tabela,
-    SUM(ilesos) AS total_ilesos,
-    SUM(levemente_feridos) AS total_levemente_feridos,
-    SUM(moderadamente_feridos) AS total_moderadamente_feridos,
-    SUM(gravemente_feridos) AS total_gravemente_feridos,
-    SUM(mortos) AS total_mortos
-FROM 
-    demostrativo_acidentes_afd
-GROUP BY 
-    YEAR(STR_TO_DATE(data, '%d/%m/%Y'))
-UNION ALL
-SELECT 
-    YEAR(STR_TO_DATE(data, '%d/%m/%Y')) AS ano,
-    'arb' AS tabela,
-    SUM(ilesos) AS total_ilesos,
-    SUM(levemente_feridos) AS total_levemente_feridos,
-    SUM(moderadamente_feridos) AS total_moderadamente_feridos,
-    SUM(gravemente_feridos) AS total_gravemente_feridos,
-    SUM(mortos) AS total_mortos
-FROM 
-    demostrativo_acidentes_arb
-GROUP BY 
-    YEAR(STR_TO_DATE(data, '%d/%m/%Y'))
-ORDER BY 
-    ano, tabela;
+
+![Design sem nome (4)](https://github.com/ferocfon/ProjetoRodovias1/assets/130929264/165ae34c-7b02-49a8-b28e-ce442210b0c0)
+
