@@ -12,7 +12,7 @@ Power BI Dashboard: Visualizações dos KPIs no Power BI.
 
 KPIs Extraídos:
 
-1- Total de Ocorrências
+1- Total de Ocorrências:
 SELECT 
     'AFD' AS tabela, 
     COUNT(*) AS total_ocorrencias 
@@ -25,7 +25,7 @@ SELECT
 FROM 
     demostrativo_acidentes_arb;
     
-2- Distribuição de Tipos de Acidente
+2- Distribuição de Tipos de Acidente:
 SELECT 
     'AFD' AS tabela, 
     tipo_de_acidente, 
@@ -48,7 +48,7 @@ ORDER BY
 
 
 
-3- Total de ocorrências mês 
+3- Total de ocorrências mês: 
 SELECT 
     'AFD' AS tabela, 
     'Ilesos' AS gravidade, 
@@ -121,7 +121,7 @@ FROM
 ORDER BY 
     total DESC;
 
-4- Total de Veículos Envolvidos por Tipo
+4- Total de Veículos Envolvidos por Tipo:
 SELECT 
     'AFD' AS tabela, 
     'Automovel' AS tipo_veiculo, 
@@ -265,7 +265,7 @@ ORDER BY
     total DESC;
 
     
-5- Total de Feridos por Gravidade
+5- Total de Feridos por Gravidade:
 SELECT 
     YEAR(STR_TO_DATE(data, '%d/%m/%Y')) AS ano,
     'afd' AS tabela,
@@ -294,7 +294,7 @@ GROUP BY
 ORDER BY 
     ano, tabela;
 
-6- Índice de Acidentes por Quilômetro
+6- Índice de Acidentes por Quilômetro:
 SELECT 
     'AFD' AS tabela, 
     km, 
@@ -315,7 +315,7 @@ GROUP BY
 ORDER BY 
     total_acidentes DESC;
 
-7- Acidentes por Horário do Dia
+7- Acidentes por Horário do Dia:
 SELECT 
     'AFD' AS tabela, 
     horario, 
